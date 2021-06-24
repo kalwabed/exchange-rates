@@ -1,12 +1,17 @@
 import './style.css'
 import React from 'react'
+import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
+
+import store from './store/main'
 import ExchangeRate from './components/ExchangeRate'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ExchangeRate />
+    <Provider store={store}>
+      <ExchangeRate />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 )
