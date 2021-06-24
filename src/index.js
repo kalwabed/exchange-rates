@@ -6,6 +6,10 @@ import ReactDOM from 'react-dom'
 import store from './store/main'
 import ExchangeRate from './components/ExchangeRate'
 import reportWebVitals from './reportWebVitals'
+import { getInitialRates } from './store/rates'
+
+// kickstart AJAX call for exchange rates
+store.dispatch(getInitialRates)
 
 ReactDOM.render(
   <React.StrictMode>
